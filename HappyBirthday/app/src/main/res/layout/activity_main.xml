@@ -18,7 +18,8 @@ tools:context="com.udacity.myapplication.MainActivity">
         android:text="Happy Birthday name_here!"
         android:textSize="36sp"
         android:fontFamily="sans-serif-light"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,6 +29,7 @@ tools:context="com.udacity.myapplication.MainActivity">
         android:layout_alignParentRight="true"
         android:textSize="36sp"
         android:fontFamily="sans-serif-light"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_margin="20dp"/>
 
 </RelativeLayout>
