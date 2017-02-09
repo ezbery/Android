@@ -6,6 +6,12 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="com.udacity.myapplication.MainActivity">
 
+    <ImageView
+        android:src="@drawable/androidparty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,10 +29,5 @@ tools:context="com.udacity.myapplication.MainActivity">
         android:textSize="36sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/white" />
-
-    <ImageView
-        android:src="@drawable/androidparty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </RelativeLayout>
