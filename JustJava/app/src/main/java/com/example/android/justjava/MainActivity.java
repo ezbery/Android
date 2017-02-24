@@ -19,6 +19,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     int quantity = 0;
+    int price_for_1 = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(quantity*5);
+        int price = quantity * price_for_1;
+        String priceMessage="Total: " + price + " zł\nThank you!";
+        displayMessage(priceMessage);
     }
 
     /**
@@ -47,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 
     public void increment(View view) {
