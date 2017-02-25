@@ -3,7 +3,7 @@ package com.example.android.justjava;
 /**
  * Add your package below. Package name can be found in the project's AndroidManifest.xml file.
  * This is the package name our example uses:
- *
+ * <p>
  * package com.example.android.justjava;
  */
 
@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
 import java.text.NumberFormat;
 
 /**
@@ -19,7 +20,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     int quantity = 0;
-    int price_for_1 = 5;
+    int pricePerCup = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,26 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the order button is clicked.
      */
+
+    private String createOrderSummary(int price) {
+        String priceMessage = "Name: name_goes_here";
+        priceMessage += "\nQuantity: " + quantity;
+        priceMessage += "\nTotal: " + price + " zł";
+        priceMessage += "\nThank you!";
+        return priceMessage;
+    }
+
     public void submitOrder(View view) {
-        int price = quantity * price_for_1;
-        String priceMessage="Total: " + price + " zł\nThank you!";
-        displayMessage(priceMessage);
+        int price = calculatePrice();
+        displayMessage(createOrderSummary(price));
+    }
+
+    /**
+     * Calculates the price of the order.
+     */
+    private int calculatePrice() {
+        int price = quantity * pricePerCup;
+        return price;
     }
 
     /**
@@ -61,12 +78,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
-        quantity ++;
+        quantity++;
         displayQuantity(quantity);
     }
 
     public void decrement(View view) {
-        quantity --;
+        quantity--;
         displayQuantity(quantity);
     }
 
