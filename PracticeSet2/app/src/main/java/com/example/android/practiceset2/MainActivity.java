@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         int day1 = 15;
         int day2 = 22;
         int day3 = 18;
-        display(day1 + day2 + day3 / 3);
+        display((day1 + day2 + day3) / 3);
     }
 
     /**
