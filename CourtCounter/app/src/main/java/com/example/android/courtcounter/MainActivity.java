@@ -50,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
+
     public void addOneForTeamB(View v) {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
 
-    public void reset (View v){
+    public void resetScore(View v) {
         scoreTeamA = 0;
         scoreTeamB = 0;
         displayForTeamA(scoreTeamA);
