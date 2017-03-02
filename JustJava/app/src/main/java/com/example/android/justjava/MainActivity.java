@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate, String name) {
-        String priceMessage = "Name: " + name;
-        priceMessage += "\nAdd whipped cream? " + addWhippedCream;
-        priceMessage += "\nAdd chocolate? " + addChocolate;
-        priceMessage += "\nQuantity: " + quantity;
-        priceMessage += "\nTotal: " + price + " zł";
-        priceMessage += "\nThank you!";
+        String priceMessage = getString(R.string.order_summary_name, name);
+        priceMessage += "\n" + getString(R.string.order_summary_whipped_cream, addWhippedCream);
+        priceMessage += "\n" + getString(R.string.order_summary_chocolate, addChocolate);
+        priceMessage += "\n" + getString(R.string.order_summary_quantity, quantity);
+        priceMessage += "\n" + getString(R.string.order_summary_price, price + " zł");
+        priceMessage += "\n" + getString(R.string.thank_you);
         return priceMessage;
     }
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent sendEmail = new Intent(Intent.ACTION_SENDTO);
         sendEmail.setData(Uri.parse("mailto:"));
-        sendEmail.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for " + nameField);
+        sendEmail.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.order_summary_email_subject, nameField));
         sendEmail.putExtra(Intent.EXTRA_TEXT, createOrderSummary(price, hasWhippedCream, hasChocolate, nameField));
         if (sendEmail.resolveActivity(getPackageManager()) != null) {
             startActivity(sendEmail);
