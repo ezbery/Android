@@ -7,6 +7,8 @@ package com.example.android.justjava;
  * package com.example.android.justjava;
  */
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -58,7 +60,14 @@ public class MainActivity extends AppCompatActivity {
         boolean hasChocolate = chocolateCheckBox.isChecked();
         String nameField = nameEditText.getText().toString();
         int price = calculatePrice(hasWhippedCream, hasChocolate);
-        displayMessage(createOrderSummary(price, hasWhippedCream, hasChocolate, nameField));
+
+        Intent sendEmail = new Intent(Intent.ACTION_SENDTO);
+        sendEmail.setData(Uri.parse("mailto:"));
+        sendEmail.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for " + nameField);
+        sendEmail.putExtra(Intent.EXTRA_TEXT, createOrderSummary(price, hasWhippedCream, hasChocolate, nameField));
+        if (sendEmail.resolveActivity(getPackageManager()) != null) {
+            startActivity(sendEmail);
+        }
     }
 
     /**
@@ -87,13 +96,6 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        orderSummaryTextView.setText(message);
-    }
 
     public void increment(View view) {
         if (quantity == 100) {
