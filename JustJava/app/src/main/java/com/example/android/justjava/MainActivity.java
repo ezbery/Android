@@ -13,19 +13,21 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * This app displays an order form to order coffee.
  */
 
 public class MainActivity extends AppCompatActivity {
-    int quantity = 0;
+    int quantity = 1;
     int pricePerCup = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        displayQuantity(quantity);
     }
 
     /**
@@ -94,12 +96,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
-        quantity++;
+        if (quantity == 100) {
+            Toast.makeText(this, "You cannot have more than 100 coffees", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            quantity++;
+        }
         displayQuantity(quantity);
     }
 
     public void decrement(View view) {
-        quantity--;
+        if (quantity == 1) {
+            Toast.makeText(this, "You cannot have less than 1 coffee", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            quantity--;
+        }
         displayQuantity(quantity);
     }
 
