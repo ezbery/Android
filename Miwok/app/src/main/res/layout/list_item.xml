@@ -4,9 +4,9 @@
     android:id="@+id/text_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:background="@color/category_numbers"
     android:minHeight="@dimen/list_item_height"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    tools:background="@color/category_numbers">
 
     <ImageView
         android:id="@+id/image"
@@ -46,10 +46,10 @@
 
     <ImageView
         android:id="@+id/play_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_gravity="center_vertical"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_play_arrow_white_24dp" />
+        android:src="@drawable/ic_play_arrow_white_36dp" />
 
 </LinearLayout>
