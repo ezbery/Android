@@ -13,6 +13,13 @@ public class FamilyActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
 
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mp) {
+            releaseMediaPlayer();
+        }
+    };
+
     /**
      * Clean up the media player by releasing its resources.
      */
@@ -59,12 +66,7 @@ public class FamilyActivity extends AppCompatActivity {
                 releaseMediaPlayer();
                 mMediaPlayer = MediaPlayer.create(FamilyActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
-                mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        releaseMediaPlayer();
-                    }
-                });
+                mMediaPlayer.setOnCompletionListener(mCompletionListener);
             }
         });
     }
