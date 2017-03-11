@@ -9,16 +9,18 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true" />
 
     <Button
+        android:id="@+id/pauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pause"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true" />
 
 </LinearLayout>
 
