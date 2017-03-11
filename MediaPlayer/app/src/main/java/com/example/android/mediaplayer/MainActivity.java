@@ -5,15 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private MediaPlayer audio1MediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final MediaPlayer audio1MediaPlayer = MediaPlayer.create(this, R.raw.audio_1);
+        audio1MediaPlayer = MediaPlayer.create(this, R.raw.audio_1);
 
         // Find the View
         Button playButton = (Button) findViewById(R.id.playButton);
@@ -26,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
                 //Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
                 //startActivity(colorsIntent);
                 audio1MediaPlayer.start();
+                audio1MediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        Toast.makeText(MainActivity.this, "done playing", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
