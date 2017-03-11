@@ -10,14 +10,16 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height" />
+        android:layout_height="@dimen/list_item_height"
+        tools:src="@drawable/number_one"/>
 
     <LinearLayout
         android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:paddingLeft="16dp"
+        tools:background="@color/category_numbers">
 
         <TextView
             android:id="@+id/miwok_text_view"
