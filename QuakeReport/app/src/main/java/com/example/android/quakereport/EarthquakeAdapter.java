@@ -30,15 +30,30 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
         magnitudeView.setText(currentEarthquake.getMagnitude());
 
-        TextView locationView = (TextView) listItemView.findViewById(R.id.location);
-        locationView.setText(currentEarthquake.getLocation());
+        String locationString = currentEarthquake.getLocation();
+        String locationOffset;
+        String primaryLocation;
+
+        if (locationString.contains(" of ")) {
+            String[] locationSplit = locationString.split("(?<= of )");
+            locationOffset = locationSplit[0];
+            primaryLocation = locationSplit[1];
+        } else {
+            locationOffset = getContext().getString(R.string.near_the);
+            primaryLocation = locationString;
+        }
+
+        TextView locationOffsetView = (TextView) listItemView.findViewById(R.id.location_offset);
+        locationOffsetView.setText(locationOffset);
+
+        TextView primaryLocationView = (TextView) listItemView.findViewById(R.id.primary_location);
+        primaryLocationView.setText(primaryLocation);
 
         Date dateObject = new Date(currentEarthquake.getmTimeInMiliSeconds());
 
         TextView dateView = (TextView) listItemView.findViewById(R.id.date);
         String formattedDate = formatDate(dateObject);
         dateView.setText(formattedDate);
-
 
         TextView timeView = (TextView) listItemView.findViewById(R.id.time);
         String formattedTime = formatTime(dateObject);
