@@ -14,8 +14,7 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">Quake Report</string>
-    <string name="near_the">Near the</string>
-    <string name="no_earthquakes">No earthquakes found</string>
-    <string name="no_internet_connection">No Internet connection</string>
+    <color name="colorPrimary">#F57C00</color>
+    <color name="colorPrimaryDark">#E65100</color>
+    <color name="colorAccent">#FFCC0000</color>
 </resources>

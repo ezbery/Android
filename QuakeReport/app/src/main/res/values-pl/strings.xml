@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quake Report</string>
+    <string name="near_the">Obok</string>
+    <string name="no_earthquakes">Nie znaleziono trzęsień ziemi</string>
+    <string name="no_internet_connection">Brak polączenia z internetem</string>
+</resources>
