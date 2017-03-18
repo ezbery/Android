@@ -4,4 +4,11 @@
     <string name="near_the">Obok</string>
     <string name="no_earthquakes">Nie znaleziono trzęsień ziemi</string>
     <string name="no_internet_connection">Brak polączenia z internetem</string>
+    <string name="settings_menu_item">Ustawienia</string>
+    <string name="settings_title">Ustawienia</string>
+    <string name="settings_min_magnitude_label">Minimalna siła</string>
+    <string name="settings_order_by_label">Sortuj</string>
+    <string name="settings_order_by_magnitude_label">Najsilnijsze</string>
+    <string name="settings_order_by_most_recent_label">Najnowsze</string>
+    <string name="settings_limit_label">Liczba wydarzeń</string>
 </resources>
