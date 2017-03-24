@@ -32,15 +32,19 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new MondayFragment();
-        } else if (position == 1){
+        } else if (position == 1) {
             return new TuesdayFragment();
-        } else {
+        } else if (position == 2) {
             return new WednesdayFragment();
+        } else if (position == 3) {
+            return new ThursdayFragment();
+        } else {
+            return new FriayFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 5;
     }
 }
