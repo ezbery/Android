@@ -25,8 +25,11 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class CategoryAdapter extends FragmentPagerAdapter {
 
+    private Context mContext;
+
     public CategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
+        mContext = context;
     }
 
     @Override
@@ -50,13 +53,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return "Numbers";
+            return mContext.getString(R.string.category_numbers);
         } else if (position == 1) {
-            return "Family";
+            return mContext.getString(R.string.category_family);
         } else if (position == 2) {
-            return "Colors";
+            return mContext.getString(R.string.category_colors);
         } else {
-            return "Phrases";
+            return mContext.getString(R.string.category_phrases);
         }
     }
 }
