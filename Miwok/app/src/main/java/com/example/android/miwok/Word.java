@@ -9,7 +9,7 @@ public class Word {
     /**
      * Default translation for the word
      */
-    private String mDefaultTranslation;
+    private int mDefaultTranslation;
 
     /**
      * Miwok translation for the word
@@ -38,7 +38,7 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation   is the word in the Miwok language
      */
-    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
+    public Word(int defaultTranslation, String miwokTranslation, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mAudioResourceId = audioResourceId;
@@ -52,7 +52,7 @@ public class Word {
      * @param miwokTranslation   is the word in the Miwok language
      * @param imageResourceId    is the drawable resource ID for the image associated with the word
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId) {
+    public Word(int defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
@@ -62,7 +62,7 @@ public class Word {
     /**
      * Get the default translation of the word.
      */
-    public String getDefaultTranslation() {
+    public int getDefaultTranslation() {
         return mDefaultTranslation;
     }
 

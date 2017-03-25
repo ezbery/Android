@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Miwok</string>
+    <string name="category_colors">Kolory</string>
+    <string name="category_family">Rodzina</string>
+    <string name="category_numbers">Liczby</string>
+    <string name="category_phrases">Zwroty</string>
+    <string name="colors_black">czarny</string>
+    <string name="colors_brown">brązowy</string>
+    <string name="colors_gray">szary</string>
+    <string name="colors_green">zielony</string>
+    <string name="colors_red">czerwony</string>
+    <string name="colors_white">biały</string>
+    <string name="family_daughter">córka</string>
+    <string name="family_father">tata</string>
+    <string name="family_grandfather">dziadek</string>
+    <string name="family_grandmother">babcia</string>
+    <string name="family_mother">mama</string>
+    <string name="family_older_brother">starszy brat</string>
+    <string name="family_older_sister">starsza siostra</string>
+    <string name="family_son">syn</string>
+    <string name="family_younger_brother">młodszy brat</string>
+    <string name="family_younger_sister">młodsza siostra</string>
+    <string name="numbers_eight">osiem</string>
+    <string name="numbers_five">pięć</string>
+    <string name="numbers_four">cztery</string>
+    <string name="numbers_nine">dziewięć</string>
+    <string name="numbers_one">jeden</string>
+    <string name="numbers_seven">siedem</string>
+    <string name="numbers_six">sześć</string>
+    <string name="numbers_ten">dziesięć</string>
+    <string name="numbers_three">trzy</string>
+    <string name="numbers_two">dwa</string>
+    <string name="colors_dusty_yellow">żółty \"piaskowy\"</string>
+    <string name="colors_mustard_yellow">żółty \"musztardowy\"</string>
+    <string name="phrase_are_you_coming">Idziesz?</string>
+    <string name="phrase_come_here">Chodź tu.</string>
+    <string name="phrase_how_are_you_feeling">Jak się czujesz?</string>
+    <string name="phrase_im_coming">Idę.</string>
+    <string name="phrase_im_feeling_good">Czuję się dobrze.</string>
+    <string name="phrase_lets_go">Chodźmy.</string>
+    <string name="phrase_my_name_is">Nazywam się ...</string>
+    <string name="phrase_what_is_your_name">Jak się nazywasz?</string>
+    <string name="phrase_where_are_you_going">Gdzie idziesz?</string>
+    <string name="phrase_yes_im_coming">Tak, idę.</string>
+</resources>
